@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // Set the number of rows
+var numRows = 4;
+var currentNumber = 1;
+
+// Outer loop for each row
+for (var i = 1; i <= numRows; i++) {
+    // Inner loop for each number in the row
+    var rowOutput = "";
+    for (var j = 1; j <= i; j++) {
+        rowOutput += currentNumber + " ";
+        currentNumber++;
+    }
+
+    // Display the row
+    console.log(rowOutput);
+}
+</script>
+</body>
+</html>

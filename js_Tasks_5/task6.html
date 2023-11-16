@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Changing Box</title>
+  <style>
+    #colorBox {
+      width: 15%;
+      height: 30vh;
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+
+<div id="colorBox"></div>
+
+<script>
+
+  const colorBox = document.getElementById('colorBox');
+
+  setInterval(() => {
+
+   
+    const randomRed = Math.floor(Math.random() * 256);
+    const randomGreen = Math.floor(Math.random() * 256);
+    const randomBlue = Math.floor(Math.random() * 256);
+
+
+    const randomColor = `rgb(${randomRed}, ${randomGreen}, ${randomBlue})`;
+
+    colorBox.style.backgroundColor = randomColor;
+  }, 1000);
+
+</script>
+
+</body>
+</html>

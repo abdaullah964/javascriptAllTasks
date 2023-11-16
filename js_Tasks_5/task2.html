@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Country Image Switcher</title>
+  <style>
+ #countryImage{
+  width: 50%;
+  height: 30vh;
+ }
+  </style>
+</head>
+
+<body>
+
+  <h1>Country Image Switcher</h1>
+  
+  <label for="countrySelect">Select a Country:</label>
+  <select id="countrySelect" onchange="changeCountry()">
+    <option value="italy">italy</option>
+    <option value="palestine">Palestine</option>
+    <option selected value="jordan"> Jordan</option>
+    <option value="syria">syria</option>
+    <option value="qatar">Qatar</option>
+  </select>
+  <div>
+      <img id="countryImage" src="jordan.jpg" alt="Jordan">
+  </div>
+
+  <script>
+    function changeCountry() {
+      var selectedCountry = document.getElementById("countrySelect").value;
+
+      
+      var imagePath = selectedCountry + ".jpg";
+
+
+      document.getElementById("countryImage").src = imagePath;
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    #mouseOver {
+      width: 20%;
+      height: 6vh;
+      display: block;
+      border: solid;
+    }
+
+    h1 {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      margin: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="mouseOver" onmouseover="MouseOver()" onmouseout="MouseOut()">
+    <h1 id="h1">Hello World!</h1>
+  </div>
+
+  <script>
+    function MouseOver() {
+      var Element = document.getElementById("mouseOver");
+      Element.style.backgroundColor = "yellow";
+     
+    }
+
+    function MouseOut() {
+      var divElement = document.getElementById("mouseOver");
+      divElement.style.backgroundColor = "";
+    }
+  </script>
+</body>
+
+</html>

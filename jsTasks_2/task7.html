@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+var favoriteDrink = prompt("Enter your favorite drink:");
+
+favoriteDrink = favoriteDrink.toLowerCase();
+
+var drinkPrice;
+
+switch (favoriteDrink) {
+    case "banana":
+        drinkPrice = 20;
+        break;
+    case "apple":
+        drinkPrice = 15;
+        break;
+    case "orange":
+        drinkPrice = 18;
+        break;
+    default:
+        console.log("Sorry, we don't have the price for " + favoriteDrink + " drink.");
+        break;
+}
+
+if (drinkPrice !== undefined) {
+    console.log("The price of a " + favoriteDrink + " drink is " + drinkPrice + " dollars.");
+}
+
+    </script>
+</body>
+</html>

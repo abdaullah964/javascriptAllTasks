@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+    function middleOfArray(array) {
+  const middleIndex = Math.floor(array.length / 2);
+
+  if (array.length % 2 == 0) {
+    return [array[middleIndex - 1], array[middleIndex]];
+  } else {
+    return array[middleIndex];
+  }
+}
+function indexOfArray(array, index) {
+  if (index < 0 || index >= array.length) {
+    return undefined;
+  } else {
+    return array[index];
+  }
+}
+function arrayExceptLast(array) {
+  return array.slice(0, array.length - 1);
+}
+function addToEnd(array, value) {
+  array.push(value);
+  return array;
+}
+function sumArrayUsingForLoop(array) {
+  let sum = 0;
+  for (let i = 0; i < array.length; i++) {
+    sum += array[i];
+  }
+  return sum;
+}
+function minInArray(array) {
+  let minValue = array[0];
+  for (let i = 1; i < array.length; i++) {
+    if (array[i] < minValue) {
+      minValue = array[i];
+    }
+  }
+  return minValue;
+}
+function removeFromArray(array, elementToRemove) {
+  const index = array.indexOf(elementToRemove);
+  if (index !== -1) {
+    array.splice(index, 1);
+  }
+  return array;
+}
+function oddArray(array) {
+  const oddElements = array.filter(element => element % 2 === 1);
+  return oddElements;
+}
+function shorterInArray(strings) {
+  let shortestString = strings[0];
+  for (let string of strings) {
+    if (string.length < shortestString.length) {
+      shortestString = string;
+    }
+  }
+  return shortestString;
+}
+function repeatChar(string, char) {
+  let count = 0;
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] == char) {
+      count++;
+    }
+  }
+  return count;
+}
+function evenIndexOddLength(strings) {
+  const oddStrings = [];
+  for (let i = 0; i < strings.length; i++) {
+    if (i % 2 === 0 && strings[i].length % 2 === 1) {
+      oddStrings.push(strings[i]);
+    }
+  }
+  return oddStrings;
+}
+function powerElementIndex(nums) {
+  const powerArray = [];
+  for (let i = 0; i < nums.length; i++) {
+    powerArray.push(nums[i] ** i);
+  }
+  return powerArray;
+}
+function evenNumberEvenIndex(nums) {
+  const evenNumbers = [];
+  for (let i = 0; i < nums.length; i++) {
+    if (i % 2 === 0 && nums[i] % 2 === 0) {
+      evenNumbers.push(nums[i]);
+    }
+  }
+  return evenNumbers;
+}
+
+
+  </script>  
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isPandigital(number) {
+    let numberString = String(number);
+
+    for (let i = 0; i <= 9; i++) {
+        if (numberString.indexOf(i.toString()) == -1) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+// Test cases
+console.log(isPandigital(1234567890)); // Output: true
+
+    </script>
+</body>
+</html>

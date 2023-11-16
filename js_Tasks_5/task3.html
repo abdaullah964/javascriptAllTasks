@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>part3</title>
+  <style>
+    form {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      width: 100%; /* Adjusted width for labels */
+    }
+
+    .input-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      margin-left: 13px;
+    }
+
+    input {
+      width: auto;
+      height: auto; 
+      padding: 10px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    
+    }
+
+    input[type="submit"] {
+      background-color: #4caf50;
+      color: white;
+      cursor: pointer;
+      width: 60%;
+      margin-left: 80px;
+    
+    }
+
+    .message-container {
+      width: 100%;
+      font-size: 14px;
+      color: red;
+    }
+ 
+  </style>
+</head>
+
+<body>
+  <form>
+    <div class="input-container">
+      <label for="password">Password (min 6 characters):</label>
+      <input type="password" id="password" name="password" oninput="validatePassword()" required>
+      <div class="message-container">
+        <div id="message1" class="message"></div>
+      </div>
+    </div>
+
+    <div class="input-container">
+      <label for="repeatPassword">Repeat Password:</label>
+      <input type="password" id="repeatPassword" name="repeatPassword" oninput="validatePassword()" required>
+      <div class="message-container">
+        <div id="message2" class="message"></div>
+      </div>
+    </div>
+    <br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    function validatePassword() {
+      var password = document.getElementById('password').value;
+      var repeatPassword = document.getElementById('repeatPassword').value;
+      var messageContainer1 = document.getElementById('message1');
+      var messageContainer2 = document.getElementById('message2');
+
+      if (password.length < 6) {
+        messageContainer1.textContent = 'Password is too short. It should be at least 6 characters.';
+        messageContainer1.style.color = "red";
+      } else {
+        messageContainer1.textContent = 'Good Password';
+        messageContainer1.style.color = "green";
+      }
+
+      if (password !== repeatPassword) {
+        messageContainer2.textContent = 'Passwords do not match.';
+        messageContainer2.style.color = "red";
+      } else {
+        messageContainer2.textContent = 'Passwords match.';
+        messageContainer2.style.color = "green";
+      }
+    }
+  </script>
+</body>
+
+</html>
